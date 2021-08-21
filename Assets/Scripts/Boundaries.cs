@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Boundaries : MonoBehaviour
 {
+    public Transform bg;
     private Vector2 screenBounds;
+    private Vector3 viewPos;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -15,9 +18,8 @@ public class Boundaries : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {  
-       Vector3 viewPos = transform.position; 
-       viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x, screenBounds.x * -1);
-    //    Debug.Log(screenBounds.x);
-    //    transform.position = viewPos;
+        viewPos = transform.position; 
+        viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x * -1, screenBounds.x );
+        transform.position = viewPos;
     }
 }

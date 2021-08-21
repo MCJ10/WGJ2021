@@ -39,9 +39,6 @@ public class SpawnManager : MonoBehaviour
         int animalIndex = UnityEngine.Random.Range(0, FishsMesopelagicaZone.Length);
 
         Instantiate(FishsMesopelagicaZone[animalIndex], spawnPos, FishsMesopelagicaZone[animalIndex].transform.rotation);
-
-
-
     }
     public void spawnEnergy()
     {
