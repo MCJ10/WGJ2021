@@ -26,4 +26,10 @@ public class Player : MonoBehaviour
             transform.Translate(Vector3.right * ms * Time.deltaTime);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log("triggering collider !! ");
+    }
+
+    
 }

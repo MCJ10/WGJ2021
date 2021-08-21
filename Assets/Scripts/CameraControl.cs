@@ -7,7 +7,7 @@ public class CameraControl : MonoBehaviour
     public Transform bg1;
     public Transform bg2;
     public Transform target;
-    public float cameraOffsetY;
+    private float cameraOffsetY = 3;
 
     private float size;
     private Vector3 cameraTargetPos = new Vector3();
