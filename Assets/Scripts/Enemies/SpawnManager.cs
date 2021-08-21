@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] FishsMesopelagicaZone;
+    public GameObject[] Energy;
 
     
 
@@ -23,7 +24,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         InvokeRepeating("spawnFishMesopelagicaZone", startDelay, spawnInterval);
-
+        InvokeRepeating("spawnEnergy", startDelay, spawnInterval);
     }
 
     // Update is called once per frame
@@ -41,5 +42,12 @@ public class SpawnManager : MonoBehaviour
 
 
 
+    }
+    public void spawnEnergy()
+    {
+        UnityEngine.Vector3 spawnPos = new UnityEngine.Vector3(UnityEngine.Random.Range(-randomRangeX, randomRangeX), target.transform.position.y + 10, 0);
+        int energyIndex = UnityEngine.Random.Range(0, Energy.Length);
+
+        Instantiate(Energy[energyIndex], spawnPos, Energy[energyIndex].transform.rotation);
     }
 }
