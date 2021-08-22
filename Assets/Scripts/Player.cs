@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float ms = 6;
     public int life = 3;
     
+    // Light radius
     private float timer = 0.0f;
     private float timeToFade = 1.0f;
     private float timeToShine = 20.0f;
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
             transform.Translate(Vector3.right * ms * Time.deltaTime);
         }
 
+        // Every second
         timer += Time.deltaTime;
         if (timer > timeToFade)
         {
