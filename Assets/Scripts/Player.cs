@@ -8,12 +8,18 @@ public class Player : MonoBehaviour
     public float ms = 6;
     public int life = 3;
     
-    private float radiusIntensity = 1;
+    private float timer = 0.0f;
+    private float timeToFade = 1.0f;
+    private float timeToShine = 20.0f;
+    private float timeToPower = 2.0f;
+    private float initialRadius;
     private Light2D point_light; 
+
     // Start is called before the first frame update
     void Start()
     {
         point_light = GetComponentInChildren<Light2D>();
+        initialRadius = point_light.pointLightOuterRadius;
     }
 
     // Update is called once per frame
@@ -31,17 +37,21 @@ public class Player : MonoBehaviour
             transform.Translate(Vector3.right * ms * Time.deltaTime);
         }
 
-        radiusIntensity = radiusIntensity - 0.008f;
-        // point_light.pointLightInnerRadius = point_light.pointLightInnerRadius * radiusIntensity;
-        point_light.intensity = point_light.intensity*radiusIntensity;
+        timer += Time.deltaTime;
+        if (timer > timeToFade)
+        {
+            timer = timer - timeToFade;
+            point_light.pointLightOuterRadius = point_light.pointLightOuterRadius - initialRadius/timeToShine;
+        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("triggering collider !! ");
-        Debug.Log(point_light.intensity);
-        // transform.GetChild(0).intensity = 0;
-        // GetComponentInChildren<Light2D>().pointLightInnerRadius = GetComponentInChildren<Light2D>().pointLightInnerRadius - 1;
-
+        if (other.tag == "Alga")
+        {
+            point_light.pointLightOuterRadius = Mathf.Clamp(point_light.pointLightOuterRadius + initialRadius/timeToPower, 0, initialRadius);
+            Destroy(other.gameObject);
+        }
         
     }
 
