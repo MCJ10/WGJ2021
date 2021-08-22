@@ -7,6 +7,10 @@ public class CameraControl : MonoBehaviour
     public Transform bg1;
     public Transform bg2;
 
+    // Boundaries for camera
+    [SerializeField] float leftLimit;
+    [SerializeField] float rightLimit;
+
   
     public Transform target;
     private float cameraOffsetY = 5;
@@ -25,7 +29,12 @@ public class CameraControl : MonoBehaviour
     void FixedUpdate()
     {
         // Vector3 targetPos = SetPos(cameraTargetPos, target.position.x, target.position.y + cameraOffsetY, -1);
-        Vector3 targetPos = new Vector3( target.transform.position.x, target.transform.position.y + cameraOffsetY, this.transform.position.z);
+        Vector3 targetPos = new Vector3
+        ( 
+            Mathf.Clamp(target.transform.position.x, leftLimit, rightLimit), 
+            target.transform.position.y + cameraOffsetY, 
+            this.transform.position.z
+        );
         this.transform.position = Vector3.Lerp(this.transform.position, targetPos, Time.deltaTime * cameraOffsetY);
 
         if (transform.position.y >= bg2.position.y)
