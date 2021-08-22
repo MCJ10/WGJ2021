@@ -25,8 +25,8 @@ public class CameraControl : MonoBehaviour
     void FixedUpdate()
     {
         // Vector3 targetPos = SetPos(cameraTargetPos, target.position.x, target.position.y + cameraOffsetY, -1);
-        Vector3 targetPos = SetPos(cameraTargetPos, Camera.main.transform.position.x, target.position.y + cameraOffsetY, -1);
-        transform.position = Vector3.Lerp(transform.position, targetPos, 0.2f);
+        Vector3 targetPos = new Vector3( target.transform.position.x, target.transform.position.y, this.transform.position.z);
+        this.transform.position = Vector3.Lerp(this.transform.position, targetPos, Time.deltaTime * cameraOffsetY);
 
         if (transform.position.y >= bg2.position.y)
         {
