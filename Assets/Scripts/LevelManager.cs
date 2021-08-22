@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] int level = 1;
     [SerializeField] public float speed = 3;
-    [SerializeField] int depth = 2000;
+     public int depth = 2000;
 
     private float baseSpeed = 6;
     private float timer = 0.0f;
@@ -15,6 +15,8 @@ public class LevelManager : MonoBehaviour
     private int distanceToLevelUp = 400;
     private int distanceLapse = 20;
     private GameObject player;
+
+    public AudioClip backAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,7 @@ public class LevelManager : MonoBehaviour
                 {
                     case 5:
                         speed = 2f*baseSpeed;
+                       
                         break;
                     default:
                         speed = baseSpeed;
