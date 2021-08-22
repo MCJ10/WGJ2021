@@ -35,14 +35,14 @@ public class SpawnManager : MonoBehaviour
 
     public void spawnFishMesopelagicaZone()
     {
-        UnityEngine.Vector3 spawnPos = new UnityEngine.Vector3(UnityEngine.Random.Range(-randomRangeX, randomRangeX), target.transform.position.y + 10, 0);
+        UnityEngine.Vector3 spawnPos = new UnityEngine.Vector3(UnityEngine.Random.Range(-randomRangeX, randomRangeX), target.transform.position.y + 20, 0);
         int animalIndex = UnityEngine.Random.Range(0, FishsMesopelagicaZone.Length);
 
         Instantiate(FishsMesopelagicaZone[animalIndex], spawnPos, FishsMesopelagicaZone[animalIndex].transform.rotation);
     }
     public void spawnEnergy()
     {
-        UnityEngine.Vector3 spawnPos = new UnityEngine.Vector3(UnityEngine.Random.Range(-randomRangeX, randomRangeX), target.transform.position.y + 10, 0);
+        UnityEngine.Vector3 spawnPos = new UnityEngine.Vector3(UnityEngine.Random.Range(-randomRangeX, randomRangeX), target.transform.position.y + 20, 0);
         int energyIndex = UnityEngine.Random.Range(0, Energy.Length);
 
         Instantiate(Energy[energyIndex], spawnPos, Energy[energyIndex].transform.rotation);

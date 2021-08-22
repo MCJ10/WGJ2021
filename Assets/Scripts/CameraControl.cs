@@ -6,6 +6,8 @@ public class CameraControl : MonoBehaviour
 {
     public Transform bg1;
     public Transform bg2;
+
+  
     public Transform target;
     private float cameraOffsetY = 3;
 

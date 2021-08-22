@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Corales
+  - Plastico
   layers:
   - Default
   - TransparentFX
@@ -39,6 +41,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 4042668217
+    locked: 0
+  - name: Foreground
+    uniqueID: 1314340467
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1642892657
     locked: 0
