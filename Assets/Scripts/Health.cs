@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
 
     private UnityEngine.Object explosionRef;
 
+    public GameOver gameoverScreen;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -26,6 +28,7 @@ public class Health : MonoBehaviour
         {
             GameObject explosion = (GameObject)Instantiate(explosionRef);
             explosion.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            gameoverScreen.Setup();
             gameObject.SetActive(false);
         }
 
