@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
         if (other.tag == "Alga")
         {
             point_light.pointLightOuterRadius = Mathf.Clamp(point_light.pointLightOuterRadius + initialRadius/timeToPower, 0, initialRadius);
+            FindObjectOfType<AudioManager>().Play("EatAlgae");
             Destroy(other.gameObject);
         }
         
