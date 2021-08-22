@@ -21,12 +21,13 @@ public class Player : MonoBehaviour
     {
         point_light = GetComponentInChildren<Light2D>();
         initialRadius = point_light.pointLightOuterRadius;
+        
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.Translate(Vector3.up * ms * Time.deltaTime);
+        // transform.Translate(Vector3.up * ms * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
