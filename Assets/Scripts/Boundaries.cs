@@ -16,17 +16,15 @@ public class Boundaries : MonoBehaviour
     {
     
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        objectWidth = transform.GetComponent<SpriteRenderer>().bounds.size.x/2;
-        objectHeigth = transform.GetComponent<SpriteRenderer>().bounds.size.y/2;
-
+        // objectWidth = transform.GetComponent<SpriteRenderer>().bounds.size.x/2;
+        objectWidth = GetComponent<BoxCollider2D>().size.x/2;
     } 
 
     // Update is called once per frame
     void LateUpdate()
     {  
-       Vector3 viewPos = transform.position; 
-        viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x +objectWidth , screenBounds.x * -1 - objectWidth);
-        viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y + objectHeigth, screenBounds.y * -1 -objectHeigth);
+        Vector3 viewPos = transform.position; 
+        viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x * -1, screenBounds.x);
         transform.position = viewPos;
     }
 }
