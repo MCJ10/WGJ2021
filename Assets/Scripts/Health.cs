@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
     public int maxHealth;
+    
+    public GameOver gameoverScreen;
+
     [SerializeField]
     private int currentHealth;
 
     private UnityEngine.Object explosionRef;
 
-    public GameOver gameoverScreen;
+
 
     void Start()
     {
@@ -41,4 +45,5 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
 
     }
+
 }
