@@ -824,7 +824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bb15cbfbd73183b47be0f43cf43fd795, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09ba30198703f824ba068619a7b6e243, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -961,7 +961,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 68caad646f452cc469d746d5839765cf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d357cca0b7e8871459ddc106098e051b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1005,24 +1005,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 985537155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04242c36177c5e5419c1e14aec252890, type: 3}
+  m_Script: {fileID: 11500000, guid: 9710d338248156a4e86162ae40022fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: PlayerDeath
-    clip: {fileID: 8300000, guid: 73e7eb94492283549986bc3e22c577c8, type: 3}
+  - name: Hit
+    clip: {fileID: 8300000, guid: 2b35c0838d359424bbe760ab4150f991, type: 3}
     volume: 1
-    pitch: 1.03
+    pitch: 1
     source: {fileID: 0}
   - name: EatAlgae
     clip: {fileID: 8300000, guid: 8f10769557802ae4cbf4f5827280a223, type: 3}
     volume: 1
-    pitch: 0.98
+    pitch: 1
     source: {fileID: 0}
-  - name: Hit
-    clip: {fileID: 8300000, guid: 2b35c0838d359424bbe760ab4150f991, type: 3}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: 73e7eb94492283549986bc3e22c577c8, type: 3}
     volume: 1
-    pitch: 0.98
+    pitch: 1
     source: {fileID: 0}
 --- !u!4 &985537158
 Transform:
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
+  m_Color: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 1}
   m_Intensity: 0.8
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: b938f6f0733e574e00000000718dec61
@@ -1345,7 +1345,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c4cbb5c39b74077499e728e2c1b69da2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 020e8117982f40b46be80605f873dd4f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1474,7 +1474,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1719827136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04ff77acde64d2c48ad7ecaa19e3e135, type: 3}
+  m_Script: {fileID: 11500000, guid: d21fdaaaca9a6ee49a7be96f857644f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &1719827142
@@ -1717,10 +1717,20 @@ MonoBehaviour:
   - {fileID: 4707733529596716045, guid: 2c7379325b15d1f4ebc2078099953ccd, type: 3}
   - {fileID: 2090066255973650293, guid: d23bf5f6d47ae1d4dbf23b0e1f6408ff, type: 3}
   - {fileID: 7927086077970385046, guid: 11d187b15097157459e13c9b6e45d1cf, type: 3}
-  FishLvl2: []
-  FishLvl3: []
-  FishLvl4: []
+  FishLvl2:
+  - {fileID: 1993358457164104835, guid: a19318efebd05b94c8635fc3c1da5c6e, type: 3}
+  - {fileID: 1611797799403470130, guid: c8be2cc0f6125274f9c353e02875d5d5, type: 3}
+  FishLvl3:
+  - {fileID: 6118607066335162336, guid: 83fc26b929563464eade196b032d862c, type: 3}
+  - {fileID: 571882948881018195, guid: 910f4060fbcc72d4d900d601e0f90518, type: 3}
+  - {fileID: 7555989384791560900, guid: 1bae02f0cd677a943b1b3e21fb1c865a, type: 3}
+  FishLvl4:
+  - {fileID: 2650125936445396364, guid: 33b86de8b34746b48b73d9634e2e5aa5, type: 3}
+  - {fileID: 8227081743440304040, guid: 49d2c775f620b9e43867c7169e5b76b9, type: 3}
+  - {fileID: 8531883867353467238, guid: afcc4bd8458b70a4cadc490cc0a657b4, type: 3}
+  - {fileID: 922514330274904968, guid: 40819be599f7feb40993361e0e8f9fe9, type: 3}
   Energy:
+  - {fileID: 1065472804287177441, guid: 1166b18b09d7d214383285af0777c721, type: 3}
   - {fileID: 1065472804287177441, guid: 1166b18b09d7d214383285af0777c721, type: 3}
   randomRangeX: 5
   target: {fileID: 627196151}
