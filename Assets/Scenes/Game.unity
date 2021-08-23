@@ -559,7 +559,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8ece136a3b996974b92782d57f35191d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bd81d9dfc790d1a43b3ead80013433f0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.62
   m_Pitch: 1
@@ -843,7 +843,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 09ba30198703f824ba068619a7b6e243, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb15cbfbd73183b47be0f43cf43fd795, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -980,7 +980,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d357cca0b7e8871459ddc106098e051b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 68caad646f452cc469d746d5839765cf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1007,7 +1007,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 985537158}
-  - component: {fileID: 985537157}
+  - component: {fileID: 985537156}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -1015,7 +1015,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &985537157
+--- !u!114 &985537156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1024,24 +1024,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 985537155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9710d338248156a4e86162ae40022fb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 04242c36177c5e5419c1e14aec252890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
   - name: Hit
     clip: {fileID: 8300000, guid: 2b35c0838d359424bbe760ab4150f991, type: 3}
     volume: 1
-    pitch: 1
+    pitch: 0.76
     source: {fileID: 0}
   - name: EatAlgae
     clip: {fileID: 8300000, guid: 8f10769557802ae4cbf4f5827280a223, type: 3}
     volume: 1
-    pitch: 1
+    pitch: 0.76
     source: {fileID: 0}
   - name: PlayerDeath
     clip: {fileID: 8300000, guid: 73e7eb94492283549986bc3e22c577c8, type: 3}
     volume: 1
-    pitch: 1
+    pitch: 0.76
     source: {fileID: 0}
 --- !u!4 &985537158
 Transform:
@@ -1364,7 +1364,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 020e8117982f40b46be80605f873dd4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4cbb5c39b74077499e728e2c1b69da2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1493,7 +1493,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1719827136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d21fdaaaca9a6ee49a7be96f857644f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 04ff77acde64d2c48ad7ecaa19e3e135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &1719827142
