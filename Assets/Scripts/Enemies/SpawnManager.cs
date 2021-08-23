@@ -54,20 +54,21 @@ public class SpawnManager : MonoBehaviour
             }
             else if (LvlManager.depth <= 1599 && LvlManager.depth >= 1200)
             {
-                InvokeRepeating("spawnLvl2Zone", startDelay, spawnInterval);
+                Invoke("spawnLvl2Zone", startDelay);
                 Invoke("spawnEnergy", startDelay);
+                timelapse = 2.7f;
             }
 
             else if (LvlManager.depth <= 1199 && LvlManager.depth >= 800)
             {
-                InvokeRepeating("spawnLvl3Zone", startDelay, spawnInterval);
-
+                Invoke("spawnLvl3Zone", startDelay);
+                timelapse = 2f;
             }
 
             else if (LvlManager.depth <= 799 && LvlManager.depth >= 400)
             {
-                InvokeRepeating("spawnLvl4Zone", startDelay, spawnInterval);
-
+                Invoke("spawnLvl4Zone", startDelay);
+                timelapse = 1f;
             }
 
         }

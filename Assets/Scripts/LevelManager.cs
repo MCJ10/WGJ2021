@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
+
 
 public class LevelManager : MonoBehaviour
 {
@@ -15,6 +17,7 @@ public class LevelManager : MonoBehaviour
     private int distanceToLevelUp = 400;
     private int distanceLapse = 20;
     private GameObject player;
+    private Light2D globalLight;
 
     public AudioClip backAudio;
 
@@ -23,6 +26,7 @@ public class LevelManager : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         speed = 0.5f*baseSpeed;
+        globalLight = GameObject.Find("GlobalLight2D").GetComponent<Light2D>();
     }
 
     // Update is called once per frame
@@ -42,11 +46,18 @@ public class LevelManager : MonoBehaviour
                 {
                     case 5:
                         speed = 2f*baseSpeed;
-                       
+                        globalLight.intensity = 10.75f;
                         break;
-                    default:
+                    case 4:
+                        globalLight.intensity = 10.75f;
+                        break;
+                    case 3:
+                        globalLight.intensity = 8.3f;
+                        break;
+                    case 2:
                         speed = baseSpeed;
-                        break;
+                        globalLight.intensity = 5f;
+                        break;  
                 }
             }
             distanceToLevelUp -= distanceLapse;

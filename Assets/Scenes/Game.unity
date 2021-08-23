@@ -1031,17 +1031,17 @@ MonoBehaviour:
   - name: Hit
     clip: {fileID: 8300000, guid: 2b35c0838d359424bbe760ab4150f991, type: 3}
     volume: 1
-    pitch: 0.76
+    pitch: 1
     source: {fileID: 0}
   - name: EatAlgae
     clip: {fileID: 8300000, guid: 8f10769557802ae4cbf4f5827280a223, type: 3}
     volume: 1
-    pitch: 0.76
+    pitch: 1
     source: {fileID: 0}
   - name: PlayerDeath
     clip: {fileID: 8300000, guid: 73e7eb94492283549986bc3e22c577c8, type: 3}
     volume: 1
-    pitch: 0.76
+    pitch: 1
     source: {fileID: 0}
 --- !u!4 &985537158
 Transform:
@@ -1068,7 +1068,7 @@ GameObject:
   - component: {fileID: 1284805037}
   - component: {fileID: 1284805036}
   m_Layer: 0
-  m_Name: Global Light 2D
+  m_Name: GlobalLight2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_Color: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 1}
   m_Intensity: 0.8
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: b938f6f0733e574e00000000718dec61
+  m_ApplyToSortingLayers: b938f6f000000000733e574e718dec61
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -1332,7 +1332,7 @@ RectTransform:
   m_GameObject: {fileID: 1465129528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 594794647}
   - {fileID: 694123639}
@@ -1751,7 +1751,7 @@ MonoBehaviour:
   Energy:
   - {fileID: 1065472804287177441, guid: 1166b18b09d7d214383285af0777c721, type: 3}
   - {fileID: 1065472804287177441, guid: 1166b18b09d7d214383285af0777c721, type: 3}
-  randomRangeX: 5
+  randomRangeX: 3
   target: {fileID: 627196151}
 --- !u!4 &1964201531
 Transform:
